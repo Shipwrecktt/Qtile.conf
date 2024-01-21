@@ -191,6 +191,7 @@ wmname = "LG3D"
 #Please be careful!!!!!!!!!
 
 #Multiple monitors with xorg making my HDMI moitor the main one
+#primary is not working for now, will fix when possable
 @hook.subscribe.startup_once
 def autostart():
     # Run xrandr command to set up monitors
