@@ -187,11 +187,16 @@ wl_input_rules = None
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
 
+#Autostart programs
+#Please be careful!!!!!!!!!
+
+#Multiple monitors with xorg making my HDMI moitor the main one
 @hook.subscribe.startup_once
 def autostart():
     # Run xrandr command to set up monitors
     subprocess.call(["xrandr", "--output", "HDMI-0", "--mode", "3840x2160", "--output", "DVI-D-0", "--mode", "1920x1080", "--left-of", "HDMI-0"])
 
+#Launches nitrogen wallpaper
 @hook.subscribe.startup_once
 def autostart():
     import subprocess
